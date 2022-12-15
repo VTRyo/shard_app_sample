@@ -25,11 +25,10 @@ class ItemsController < ApplicationController
 
   private
 
-
   def create_item_id
     incr_id = IdTable.last.id + 1
     ActiveRecord::Base.connected_to(shard: :default) do
-      IdTable.create!(id: incr_id, table_name: "items") # idではなくgen_idとして登録するとよさそう
+      IdTable.create!(id: incr_id, table_name: "items")
     end
   end
 
