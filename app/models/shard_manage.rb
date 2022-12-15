@@ -1,0 +1,2 @@
+class ShardManage < ApplicationRecord
+end

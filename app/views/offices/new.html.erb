@@ -1,0 +1,6 @@
+<h1>Office New</h1>
+
+<%= form_for(@office) do |o| %>
+  <div>Input Office Name <%= o.text_field :name %></div>
+  <%= o.submit "投稿" %>
+<% end %>

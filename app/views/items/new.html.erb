@@ -1,0 +1,7 @@
+<h1>Item New</h1>
+
+<%= form_for(@item) do |i| %>
+  <div>Input Item Name <%= i.text_field :name %></div>
+  <div>Input Office_id <%= i.text_field :office_id %></div>
+  <%= i.submit "投稿" %>
+<% end %>

@@ -1,0 +1,2 @@
+class IdTable < ApplicationRecord
+end
