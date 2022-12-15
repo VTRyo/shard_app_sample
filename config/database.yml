@@ -13,9 +13,9 @@ default: &default
   host: localhost
 
 development:
-  master:
+  primary:
     <<: *default
-    database: shard_app_master_development
+    database: shard_app_primary_development
   shard_one:
     <<: *default
     database: shard_app_shard_one_development

@@ -26,9 +26,9 @@ class ItemsController < ApplicationController
   private
 
   def create_item_id
-    incr_id = IdTable.last.id + 1
+    latest_id = IdTable.last.id + 1
     ActiveRecord::Base.connected_to(shard: :default) do
-      IdTable.create!(id: incr_id, table_name: "items")
+      IdTable.create!(id: latest_id, table_name: "items")
     end
   end
 
